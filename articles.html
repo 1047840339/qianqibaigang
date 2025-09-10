@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科普文章 - 航运知识百科</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .articles-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .article-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .article-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">← 返回首页</a>
+        <h1>科普文章</h1>
+        <p>深入了解航运知识</p>
+    </header>
+
+    <main class="container">
+        <div class="articles-container">
+            <div class="article-card">
+                <h3 class="article-title">什么是集装箱运输？</h3>
+                <div class="article-meta">发布时间: 2024-01-15 | 阅读量: 1,234</div>
+                <p>集装箱运输是现代航运业的重要组成部分，它通过标准化的集装箱实现货物的高效运输...</p>
+            </div>
+
+            <div class="article-card">
+                <h3 class="article-title">航运保险的重要性</h3>
+                <div class="article-meta">发布时间: 2024-01-12 | 阅读量: 987</div>
+                <p>在国际贸易中，航运保险为货物运输提供重要保障，降低运输风险...</p>
+            </div>
+
+            <div class="article-card">
+                <h3 class="article-title">港口操作流程详解</h3>
+                <div class="article-meta">发布时间: 2024-01-10 | 阅读量: 1,567</div>
+                <p>现代港口的操作流程包括货物装卸、仓储管理、运输调度等多个环节...</p>
+            </div>
+
+            <div class="article-card">
+                <h3 class="article-title">海运提单的作用与分类</h3>
+                <div class="article-meta">发布时间: 2024-01-08 | 阅读量: 2,134</div>
+                <p>海运提单是航运业中最重要的单据之一，具有货物收据、运输合同和物权凭证的作用...</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

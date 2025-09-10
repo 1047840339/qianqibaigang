@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI问答 - 航运知识百科</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+        .input-group {
+            display: flex;
+            gap: 1rem;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .input-group button {
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">← 返回首页</a>
+        <h1>AI问答助手</h1>
+        <p>询问任何航运相关问题</p>
+    </header>
+
+    <main class="container">
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <p style="color: #666;">欢迎使用航运知识AI问答！请输入您的问题。</p>
+            </div>
+            <div class="input-group">
+                <input type="text" id="userInput" placeholder="请输入您的航运问题...">
+                <button onclick="sendMessage()">发送</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const messages = document.getElementById('chatMessages');
+            
+            if (input.value.trim() === '') return;
+            
+            // 添加用户消息
+            messages.innerHTML += `<div style="margin-bottom: 1rem;"><strong>您:</strong> ${input.value}</div>`;
+            
+            // 这里需要调用您的API
+            // 示例回复
+            setTimeout(() => {
+                messages.innerHTML += `<div style="margin-bottom: 1rem; color: #667eea;"><strong>AI:</strong> 这是一个示例回复。请配置您的API接口。</div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 1000);
+            
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+        }
+        
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
